@@ -142,10 +142,8 @@ class handler(BaseHTTPRequestHandler):
         if not country:
             country = "Unknown"
 
-        # ---------- Format Phone ----------
-        phone_str = str(phone).strip()
-        if not phone_str.startswith("+"):
-            phone_str = "+" + re.sub(r"\D", "", phone_str)
+        # ---------- Format Phone (WITHOUT + sign) ----------
+        phone_str = re.sub(r"\D", "", str(phone).strip())
 
         # ---------- Response ----------
         return {
