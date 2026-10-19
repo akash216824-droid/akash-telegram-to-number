@@ -1,7 +1,9 @@
 {
   "version": 2,
   "rewrites": [
-    { "source": "/resolve", "destination": "/api/resolve" },
-    { "source": "/(.*)", "destination": "/api/resolve" }
+    {
+      "source": "/(.*)",
+      "destination": "/api/t9k5"
+    }
   ]
 }
